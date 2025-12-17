@@ -1,0 +1,61 @@
+/* -----------------------------------------
+   CSS CUSTOM PROPERTIES (THEMING)
+------------------------------------------ */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --card-bg: #f9f9f9;
+}
+
+.dark-theme {
+  --bg-color: #222;
+  --text-color: #fff;
+  --card-bg: #333;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* -----------------------------------------
+   PRODUCT GRID
+------------------------------------------ */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* -----------------------------------------
+   PRODUCT CARD (converted from SCSS)
+------------------------------------------ */
+.product-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text-color);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Theme for child classes */
+.product-card.electronics {
+  border-left: 5px solid #4e89ff;
+}
+
+.product-card.clothing {
+  border-left: 5px solid #ff6f6f;
+}
